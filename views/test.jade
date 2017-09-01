@@ -1,0 +1,30 @@
+doctype 5
+html
+  head
+    - if (typeof(title) == 'undefined')
+        title Test page TITLE undefined
+    - else 
+        title= title
+    
+    // include default stylesheets and any view stylesheets
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    // include default scripts and any view scripts
+    script(src='/javascripts/jquery-1.8.3.min.js')
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/three.min.js')
+    script(src='/javascripts/test.js')
+    
+    block head
+    
+  body
+    div
+        p(class="p_text") WTF 嘿嘿  -  除控制端外所有打开的页面此立方体都是同步的（唉，有bug……）
+        
+        //a(href="/") Back to Home
+        
+    //input(type="button", value="Send", id="send")
+    div#THREE
+    //div#TestInfo
+    //div#console
+        
